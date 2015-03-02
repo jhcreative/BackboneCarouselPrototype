@@ -1,0 +1,171 @@
+/* frbCarousel styles - desktop first */
+
+body {
+  background: #222;
+}
+
+
+/* carousel containers */
+.carousel-container {
+  width: 60%;
+  margin: auto;
+  padding: 45px 0 45px 0;
+}
+
+.carousel-list {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-height: 600px;
+    margin: auto;
+}
+
+
+/* carousel items */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transform: perspective(900px) rotateY(90deg);  /* 'prev' direction */
+}
+
+.carousel-item.current{
+  opacity: 1;
+  z-index: 10;
+  transform: perspective(900px) rotateY(0deg);
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+
+/* carousel controls */
+.control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border-radius: 50%;
+  background: #161515;
+  cursor: pointer;
+  z-index: 20;
+}
+.control:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 10px solid transparent;
+  top: 15px;
+}
+
+.control.prev {
+  left: 10%;
+}
+.control.prev:after {
+  left: 5px;
+  border-right: 15px solid #ddd;
+}
+.control.next {
+  right: 10%;
+}
+.control.next:after {
+  right: 5px;
+  border-left: 15px solid #ddd;
+}
+
+
+/* tablet portrait defintions */
+@media screen and (max-width: 800px) {
+
+  .carousel-container {
+    width: 75%;
+  }
+  .control.prev {
+    left: 2.5%;
+  }
+  .control.next {
+    right: 2.5%;
+  }
+
+}
+
+
+
+/* phone definitions */
+
+@media screen and (max-width: 600px) {
+
+  .carousel-container {
+    padding: 25px 0 65px;
+    width: 100%;
+  }
+  .control {
+    top: auto;
+    bottom: 5%;
+    width: 45px;
+    height: 45px;
+  }
+  .control.prev {
+    left: 50px;
+  }
+  .control.next {
+    right: 50px;
+  }
+  .control:after {
+    top: 12px;
+  }
+  .control.prev:after {
+    left: 3px;
+  }
+  .control.next:after {
+    right: 3px;
+  }
+
+}
+
+
+
+
+
+
+/* tablet graphic transitions
+.tablet-transition {
+  @extend .tablet-transition;
+  -webkit-backface-visibility: visible;
+  //-webkit-transform-style: preserve-3d;
+}
+.tablet-transition.right.open {
+  -webkit-transform: none;
+  -webkit-perspective: none;
+  transform: scale(1.2) perspective(900px) rotateY(-33deg);
+  @include breakpoint(ninehundred){
+    margin-top: 0;
+    -webkit-transform: none;
+    transform: none; // scale(1.1) perspective(300px) rotateX(45deg);
+  }
+}
+.tablet-transition.left.open {
+  -webkit-transform: none;
+  -webkit-perspective: none;
+  transform: scale(1.2, 1.3) perspective(900px) rotateY(33deg);
+  @include breakpoint(ninehundred){
+    margin-top: 0;
+    -webkit-transform: none;
+    transform: none; //scale(1.1) perspective(300px) rotateX(45deg);
+  }
+}
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition:    all 0.5s ease-out;
+  transition:         all 0.5s ease-out;
+
+*/

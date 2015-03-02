@@ -1,0 +1,97 @@
+/* custom reset based on normalize.css v2.0.1 | MIT License | git.io/normalize
+ * and
+ * http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+
+
+/* basic element definitions */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, article, aside, big, cite, code,
+del, details, dfn, em,
+img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, input, textarea, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  outline: none;
+}
+
+a { outline: none !important; }
+
+/* fonts & typography */
+html {
+  font-family: $light-font-family;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%; /* prevents iOS text size adjust after orientation change, without disabling user zoom. */
+  -ms-text-size-adjust: 100%;
+  color: #fff;
+}
+
+body,
+input,
+button  { -webkit-font-smoothing: antialiased; }
+
+
+/* list styles */
+ol, ul {
+  list-style-type: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-padding-start: 0px;
+}
+
+/* blockquote styles */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  IE 8/9 : Styling for `hidden` attribute not present */
+[hidden] { display: none; }
+
+/* Link outlines */
+a:focus { outline: thin dotted; }
+
+a:active,
+a:hover { outline: 0; }
+
+/* `audio` styles */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Re-set default cursor for disabled elements. */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* Compressive images for retina/all dpi devices */
+img {
+  width: 100%;
+  height: auto;
+}
