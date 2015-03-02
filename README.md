@@ -1,6 +1,5 @@
-# BackboneCarouselPrototype
-
 ## Image carousel exploration using Backbone.js, Marionette.js & Require.js
+- view demo at http://johnhiemstra.com/carousel-prototype/
 
 ### Requirements
 - Create a simple browser-based image carousel that will allow users to cycle through a set of images.
@@ -19,7 +18,7 @@
 - Carousel UI components load via nested require statement in carousel-bbm.js file, including GSAP animation library.
 - New features common to most carousels prepared for in content definition and ui: 
   -- image info as originating ID, 'alt' and 'title' information in content definition in carousel-bbm.js
-  -- independent numbering for scalable pagination, sample transition structure, etc in carousel-ui.js
+  -- independent numbering for scalable pagination, sample transition structure using GSAP, etc in carousel-ui.js
 - Example insertion point for new features as views noted with comments in index.html
 
 
